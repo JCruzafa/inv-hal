@@ -1,5 +1,5 @@
 const { SerialPort } = require('serialport');
-
+//commit action
 // Definimos la interfaz para los puertos aaaa
 interface PortInfo {
   path: string;
