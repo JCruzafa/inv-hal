@@ -1,6 +1,6 @@
 const { SerialPort } = require('serialport');
 
-// Definimos la interfaz para los puertos
+// Definimos la interfaz para los puertos aaaa
 interface PortInfo {
   path: string;
   manufacturer?: string;
