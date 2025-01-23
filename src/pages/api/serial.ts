@@ -35,7 +35,8 @@ listSerialPorts();
 
 
 
-const port = new SerialPort({ path: '/dev/ttyUSB0', baudRate: 115200 });
+// const port = new SerialPort({ path: '/dev/ttyUSB0', baudRate: 115200 });
+const port = new SerialPort({ path: '/dev/ttyUSB0', baudRate: 921600 });
 
 port.open(function (err:any) {
     console.log('Error open: ')
