@@ -1,7 +1,6 @@
 import { calculateCRC16 } from './calculateCRC';
 import { procesarTrama } from './tramaProcesamiento';
 
-
 const INICIO_TRAMA = Buffer.from([0xCC, 0xAA, 0xAA, 0xAA]);
 const FINAL_TRAMA = Buffer.from([0xCC, 0xBB, 0xBB, 0xBB]);
 const LONGITUD_CABECERA = 13; // Cabecera fija hasta Tamaño trama datos
