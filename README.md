@@ -2,6 +2,20 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+# o, si el comando anterior no funciona, ejecutamos: nvm install --lts
+
+nvm install 20
+
+node --version
+npm --version
+
+npm install -g typescript
+
+sudo apt update && sudo apt upgrade
+
+npx create-next-app@latest example-app
+
 First, run the development server:
 
 ```bash
