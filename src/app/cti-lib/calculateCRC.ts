@@ -35,17 +35,16 @@ const crc16Table: number[] = [
 ];
 
 // Función para calcular el CRC16
-export function calculateCRC16(data: Buffer, crcInit: number = 0): number {
+export function calculateCRC16(data: Buffer, crcInit: number = 0x0000): number {
   let crc = crcInit;
-
-  for (const byte of data) {
-    const tableIndex = (crc ^ byte) & 0xff;
-    crc = (crc >> 8) ^ crc16Table[tableIndex];
+  for (let i = 0; i < data.length; i++) {
+      crc = (crc >> 8) ^ crc16Table[(crc ^ data[i]) & 0xff];
   }
-
-  //return crc;
-  return crc & 0xFFFF;
+  return crc;
 }
+
+
+
 
 // Ejemplo de uso
 //const data = Buffer.from([0x01, 0x02, 0x03, 0x04]); // Datos de ejemplo

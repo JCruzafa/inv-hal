@@ -1,4 +1,8 @@
-const { SerialPort } = require('serialport');
+import { detectarTrama } from "@/app/cti-lib/tramaDeteccion";
+//const { detectarTrama } = require('@/app/cti-lib/tramaDeteccion');
+//const { SerialPort } = require('serialport');
+import { SerialPort } from 'serialport';
+
 //commit action
 // Definimos la interfaz para los puertos aaaa
 interface PortInfo {
@@ -55,6 +59,7 @@ port.on('readable', function () {
   
   if (data !== null) {
     // Aquí ya estamos seguros de que data es un Buffer
+    detectarTrama(data);
     console.log('Data (ASCII):', data.toString('ascii'));
   }
-})
+});

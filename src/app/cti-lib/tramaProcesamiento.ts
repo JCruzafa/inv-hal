@@ -1,16 +1,9 @@
+import { TramaDecodificada }from '@/backend/parametros/tiposGlobales';
+
 const INICIO_TRAMA = Buffer.from([0xCC, 0xAA, 0xAA, 0xAA]);
 const LONGITUD_CABECERA = 13; // Cabecera fija hasta Tamaño trama datos
 
-export interface TramaDecodificada {
-  versionProtocolo: number;
-  reserva: number;
-  nodoOrigen: number;
-  nodoDestino: number;
-  tipoTrama: number;
-  tipoMensaje: number;
-  tamanoDatos: number;
-  datos: Buffer;
-}
+// TramaDecodificada es un interface declarado en tiposGlobales.ts
 
 /**
  * Procesa una trama previamente validada y decodifica sus campos.
